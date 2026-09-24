@@ -2926,6 +2926,13 @@ body {
   color: var(--color-ink-soft);
 }
 
+[data-theme="light"] .role-skills span,
+[data-theme="light"] .timeline-current .role-skills span {
+  border-color: var(--color-rule-strong);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-soft);
+}
+
 [data-theme="light"] .hero::before {
   opacity: 0.34;
 }
