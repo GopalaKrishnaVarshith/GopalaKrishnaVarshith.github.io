@@ -2920,6 +2920,12 @@ body {
   border-color: var(--color-rule-strong);
 }
 
+[data-theme="light"] .platform-strip .tags span {
+  border-color: var(--color-rule-strong);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-soft);
+}
+
 [data-theme="light"] .hero::before {
   opacity: 0.34;
 }
