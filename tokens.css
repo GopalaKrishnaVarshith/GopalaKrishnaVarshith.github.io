@@ -1,0 +1,94 @@
+:root {
+  --color-paper: oklch(14% 0.018 210);
+  --color-paper-deep: oklch(10% 0.016 210);
+  --color-surface: oklch(18% 0.021 205);
+  --color-surface-raised: oklch(22% 0.025 195);
+  --color-surface-soft: oklch(25% 0.022 180);
+  --color-ink: oklch(95% 0.012 145);
+  --color-ink-soft: oklch(85% 0.018 165);
+  --color-muted: oklch(72% 0.022 185);
+  --color-rule: oklch(40% 0.025 190);
+  --color-rule-strong: oklch(54% 0.035 185);
+  --color-accent: oklch(91% 0.17 125);
+  --color-accent-soft: oklch(84% 0.11 125);
+  --color-accent-ink: var(--color-paper);
+  --color-focus: oklch(88% 0.18 125);
+  --color-warm: oklch(78% 0.1 45);
+  --color-grid-cool: oklch(72% 0.11 225);
+  --color-grid-warm: oklch(76% 0.12 45);
+  --color-logo-surface: oklch(97% 0.008 175);
+  --color-art-1: oklch(32% 0.07 155);
+  --color-art-2: oklch(32% 0.08 225);
+  --color-art-3: oklch(32% 0.075 320);
+  --color-art-4: oklch(33% 0.07 75);
+  --color-art-5: oklch(30% 0.06 175);
+  --color-art-6: oklch(31% 0.07 285);
+  --color-art-7: oklch(33% 0.075 45);
+
+  --font-display: "Baskerville", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "Aptos", "Segoe UI Variable", "Trebuchet MS", sans-serif;
+  --font-outlier: "Cascadia Code", "SFMono-Regular", monospace;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --text-xs: 0.72rem;
+  --text-sm: 0.84rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.56rem;
+  --text-xl: 1.95rem;
+  --text-2xl: 2.44rem;
+  --text-3xl: 3.05rem;
+  --text-4xl: 3.81rem;
+  --text-display-s: clamp(2.9rem, 5.6vw, 4.9rem);
+  --text-display: clamp(3.1rem, 6.5vw, 5.25rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long: 420ms;
+
+  --rule-hairline: 1px solid var(--color-rule);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.625rem;
+  --page-gutter: clamp(1rem, 5vw, 4.5rem);
+  --z-sticky: 200;
+}
+
+[data-theme="light"] {
+  --color-paper: oklch(98% 0.008 300);
+  --color-paper-deep: oklch(95% 0.012 300);
+  --color-surface: oklch(96% 0.016 300);
+  --color-surface-raised: oklch(100% 0.004 300);
+  --color-surface-soft: oklch(92% 0.025 300);
+  --color-ink: oklch(23% 0.035 292);
+  --color-ink-soft: oklch(36% 0.035 292);
+  --color-muted: oklch(48% 0.03 292);
+  --color-rule: oklch(78% 0.025 300);
+  --color-rule-strong: oklch(62% 0.045 300);
+  --color-accent: oklch(51% 0.18 310);
+  --color-accent-soft: oklch(62% 0.14 310);
+  --color-focus: oklch(49% 0.2 310);
+  --color-warm: oklch(70% 0.12 78);
+  --color-grid-cool: oklch(62% 0.14 310);
+  --color-grid-warm: oklch(73% 0.12 78);
+  --color-logo-surface: oklch(100% 0.004 300);
+  --color-art-1: oklch(91% 0.055 155);
+  --color-art-2: oklch(90% 0.065 245);
+  --color-art-3: oklch(90% 0.065 325);
+  --color-art-4: oklch(91% 0.07 82);
+  --color-art-5: oklch(89% 0.055 175);
+  --color-art-6: oklch(89% 0.07 285);
+  --color-art-7: oklch(90% 0.065 45);
+}

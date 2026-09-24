@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-24",
+  "framework": "Next.js 16 app router",
+  "fontStack": "Arial body with Georgia display",
+  "palette": "Dark blue-green surfaces with lime accent",
+  "motion": "Motion-on; Lenis is installed and the site uses restrained CSS transitions",
+  "spacing": "Mixed pixel spacing; Hallmark adds a 4-point semantic scale",
+  "preserve": ["dark editorial character", "lime anchor", "portrait", "content hierarchy"],
+  "introduce": ["Portfolio Grid structure", "token discipline", "quieter motion", "responsive safeguards"]
+}
