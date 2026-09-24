@@ -1,22 +1,11 @@
-"use client";
-
 import { Moon, Sun } from "lucide-react";
 
-type Theme = "dark" | "light";
-
 export function ThemeToggle() {
-  function toggleTheme() {
-    const currentTheme = document.documentElement.dataset.theme;
-    const nextTheme: Theme = currentTheme === "light" ? "dark" : "light";
-    document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem("portfolio-theme", nextTheme);
-  }
-
   return (
     <button
       className="theme-toggle"
       type="button"
-      onClick={toggleTheme}
+      data-theme-toggle
       aria-label="Toggle light and dark mode"
       title="Toggle light and dark mode"
     >

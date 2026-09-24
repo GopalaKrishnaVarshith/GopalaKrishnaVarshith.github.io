@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Mail, Linkedin } from "lucide-react";
 import {
@@ -86,7 +85,7 @@ export default function Home() {
             <div className="identity-row">
               <div className="portrait-crop">
                 <Image
-                  src="/krishna-varshith-portrait.png"
+                  src={ABOUT_ME.profileImage}
                   alt="Krishna Varshith R"
                   fill
                   priority
@@ -210,7 +209,7 @@ export default function Home() {
         </div>
         <div className="project-grid">
           {PROJECTS.map((project, index) => (
-            <Link
+            <a
               className="project-card"
               href={"/projects/" + generateSlug(project.name)}
               key={project.name}
@@ -247,7 +246,7 @@ export default function Home() {
                   View case study <ArrowUpRight size={16} aria-hidden="true" />
                 </span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -355,7 +354,7 @@ export default function Home() {
           >
             <span className="publication-cover">
               <Image
-                src="/pharmacovigilance-made-easy-cover.webp"
+                src="/pharmacovigilance-made-easy-cover-160.webp"
                 alt="Cover of Pharmacovigilance Made Easy"
                 width={78}
                 height={117}

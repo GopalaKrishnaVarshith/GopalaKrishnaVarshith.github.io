@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:pages": "next build && node scripts/optimize-static-export.mjs",
     "start": "next start",
     "lint": "eslint src/app src/lib",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"*.{ts,tsx}\""

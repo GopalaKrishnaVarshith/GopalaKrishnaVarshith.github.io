@@ -13,8 +13,8 @@ export const ABOUT_ME = {
     "My work spans RIMS and regulatory data, pharmacovigilance, document quality, request workflows, and responsible AI. At Amgen, I help turn manual regulatory work into traceable tools that people can review, use, and maintain.",
     "I stay close to the full delivery path: discovery, requirements, prototyping, UAT, release readiness, adoption, and continuous improvement. I also wrote Pharmacovigilance Made Easy to make a complex field easier to learn.",
   ],
-  profileImage: "/krishna-varshith-portrait.png",
-  profileGif: "/krishna-varshith-portrait.png",
+  profileImage: "/krishna-varshith-portrait-320.webp",
+  profileGif: "/krishna-varshith-portrait-320.webp",
 };
 export const USER_NAMES = {
   githubUsername: "",

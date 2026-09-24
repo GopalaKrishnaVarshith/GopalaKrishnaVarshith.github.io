@@ -2,6 +2,32 @@ import type { Metadata, Viewport } from "next";
 import { ABOUT_ME, BASE_URL, SOCIAL_LINKS } from "./constants/data";
 import "./globals.css";
 
+const portfolioRuntime = `
+(()=>{
+  const root=document.documentElement;
+  try{
+    const saved=localStorage.getItem("portfolio-theme");
+    if(saved==="light"||saved==="dark") root.dataset.theme=saved;
+  }catch{}
+  const init=()=>{
+    document.querySelectorAll("[data-theme-toggle]").forEach((button)=>{
+      button.addEventListener("click",()=>{
+        const next=root.dataset.theme==="light"?"dark":"light";
+        root.dataset.theme=next;
+        try{localStorage.setItem("portfolio-theme",next)}catch{}
+      });
+    });
+    const topLink=document.querySelector(".back-to-top");
+    if(topLink){
+      const update=()=>topLink.classList.toggle("is-visible",window.scrollY>480);
+      update();
+      window.addEventListener("scroll",update,{passive:true});
+    }
+  };
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init,{once:true});
+  else init();
+})();`;
+
 export const metadata: Metadata = {
   title: {
     default: ABOUT_ME.name + " | Regulatory Technology & Workflow Automation",
@@ -114,9 +140,9 @@ export default function RootLayout({
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         <script
+          id="portfolio-runtime"
           dangerouslySetInnerHTML={{
-            __html:
-              "try{var t=localStorage.getItem('portfolio-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t}}catch(e){}",
+            __html: portfolioRuntime,
           }}
         />
         <script

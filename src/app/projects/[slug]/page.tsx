@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Static GitHub Pages navigation avoids loading the Next client router. */
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { PROJECTS, ABOUT_ME } from "@/app/constants/data";
 import { generateSlug } from "@/lib/utils";
@@ -36,23 +36,23 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <main className="site-shell project-page">
       <header className="site-header">
-        <Link className="brand" href="/">
+        <a className="brand" href="/">
           <span className="brand-mark">KV</span>
           <span>
             Krishna Varshith<span className="brand-period">.</span>
           </span>
-        </Link>
+        </a>
         <div className="header-actions">
           <ThemeToggle />
-          <Link className="header-cta" href="/#work">
+          <a className="header-cta" href="/#work">
             <ArrowLeft size={16} /> All work
-          </Link>
+          </a>
         </div>
       </header>
       <div className="project-detail">
-        <Link className="back-link" href="/#work">
+        <a className="back-link" href="/#work">
           <ArrowLeft size={17} /> Selected work
-        </Link>
+        </a>
         <span className="eyebrow">{project.category}</span>
         <h1>
           {project.name}
@@ -152,9 +152,9 @@ export default async function ProjectPage({ params }: Props) {
           Some work is described at a high level to respect confidential
           materials, internal systems, and source code.
         </p>
-        <Link href="/#contact" className="detail-contact">
+        <a href="/#contact" className="detail-contact">
           Discuss this work <ArrowUpRight size={18} />
-        </Link>
+        </a>
       </div>
       <footer className="letter-footer">
         <p className="footer-signoff">
@@ -162,8 +162,8 @@ export default async function ProjectPage({ params }: Props) {
           <strong>— {ABOUT_ME.name}</strong>
         </p>
         <div className="footer-meta">
-          <Link href="/#work">All projects ↑</Link>
-          <Link href="/#contact">Start a conversation</Link>
+          <a href="/#work">All projects ↑</a>
+          <a href="/#contact">Start a conversation</a>
         </div>
       </footer>
     </main>

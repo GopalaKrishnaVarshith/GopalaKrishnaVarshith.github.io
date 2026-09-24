@@ -34,7 +34,7 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://gopalakrishnavarshith.github.io
           NEXT_TELEMETRY_DISABLED: "1"
-        run: npm run build
+        run: npm run build:pages
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
