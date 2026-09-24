@@ -19,8 +19,15 @@ const portfolioRuntime = `
     });
     const topLink=document.querySelector(".back-to-top");
     if(topLink){
-      const update=()=>topLink.classList.toggle("is-visible",window.scrollY>480);
-      update();
+      let updateQueued=false;
+      const update=()=>{
+        if(updateQueued) return;
+        updateQueued=true;
+        requestAnimationFrame(()=>{
+          topLink.classList.toggle("is-visible",window.scrollY>480);
+          updateQueued=false;
+        });
+      };
       window.addEventListener("scroll",update,{passive:true});
     }
   };
