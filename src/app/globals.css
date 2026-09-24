@@ -1,6 +1,3 @@
-/* Hallmark · genre: editorial · macrostructure: Portfolio Grid · theme: Studio · enrichment: user portrait · nav: N9 · footer: Ft6 · contrast: pass (40–41) · responsive: pass (34, 49–57) */
-/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5 */
-/* Audience: hiring managers and regulated-workflow leaders · use: explore proof and start a conversation · tone: technical editorial */
 @import "tailwindcss";
 @import "../../tokens.css";
 :root {
@@ -1791,7 +1788,6 @@ section[id] {
   }
 }
 
-/* Hallmark refinement layer: token-led, quiet, evidence-first. */
 html,
 body {
   overflow-x: clip;

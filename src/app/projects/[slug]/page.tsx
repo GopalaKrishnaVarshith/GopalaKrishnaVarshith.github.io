@@ -14,11 +14,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = PROJECTS.find((item) => generateSlug(item.name) === slug);
+  const projectUrl = "/projects/" + slug + "/";
   return project
     ? {
         title: project.name,
         description: project.description,
-        alternates: { canonical: "/projects/" + slug },
+        alternates: { canonical: projectUrl },
+        openGraph: {
+          type: "article",
+          title: project.name,
+          description: project.description,
+          url: projectUrl,
+        },
       }
     : { title: "Project not found" };
 }

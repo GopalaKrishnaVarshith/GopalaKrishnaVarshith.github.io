@@ -1,10 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  ABOUT_ME,
-  BASE_URL,
-  IS_PUBLIC_SITE,
-  SOCIAL_LINKS,
-} from "./constants/data";
+import { ABOUT_ME, BASE_URL, SOCIAL_LINKS } from "./constants/data";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,6 +9,11 @@ export const metadata: Metadata = {
   },
   description:
     "Regulatory technology business analyst building trustworthy workflows across document QC, regulatory data, digital product delivery, and responsible AI.",
+  applicationName: ABOUT_ME.name + " Portfolio",
+  authors: [{ name: ABOUT_ME.name, url: BASE_URL }],
+  creator: ABOUT_ME.name,
+  publisher: ABOUT_ME.name,
+  category: "Professional portfolio",
   keywords: [
     "Krishna Varshith R",
     "regulatory technology business analyst",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "digital product delivery",
   ],
   metadataBase: new URL(BASE_URL),
-  alternates: IS_PUBLIC_SITE ? { canonical: "/" } : undefined,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     title: ABOUT_ME.name + " | Regulatory Technology & Workflow Automation",
@@ -33,6 +33,15 @@ export const metadata: Metadata = {
       "Business analysis, workflow automation, and responsible AI for regulated work.",
     url: BASE_URL,
     siteName: ABOUT_ME.name,
+    locale: "en_IN",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Krishna Varshith R — Regulatory technology and workflow automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +50,17 @@ export const metadata: Metadata = {
       "Business analysis, workflow automation, and responsible AI for regulated work.",
     images: ["/opengraph-image"],
   },
-  robots: { index: IS_PUBLIC_SITE, follow: IS_PUBLIC_SITE },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -55,8 +74,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const person = {
-    "@context": "https://schema.org",
     "@type": "Person",
+    "@id": BASE_URL + "/#person",
     name: ABOUT_ME.name,
     url: BASE_URL,
     jobTitle: ABOUT_ME.title,
@@ -77,6 +96,20 @@ export default function RootLayout({
       "Responsible AI",
     ],
   };
+  const website = {
+    "@type": "WebSite",
+    "@id": BASE_URL + "/#website",
+    url: BASE_URL,
+    name: ABOUT_ME.name + " — Portfolio",
+    description:
+      "Regulatory technology, workflow automation, business analysis, and responsible AI portfolio.",
+    inLanguage: "en-IN",
+    author: { "@id": BASE_URL + "/#person" },
+  };
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [person, website],
+  };
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
@@ -88,7 +121,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body>{children}</body>
