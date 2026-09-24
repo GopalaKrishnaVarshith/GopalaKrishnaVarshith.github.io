@@ -4,15 +4,15 @@
 > automation, business analysis, document and data quality, pharmacovigilance,
 > digital product delivery, and responsible AI.
 
-Canonical site: https://gopalakrishnavarshith.github.io/
-LinkedIn: https://www.linkedin.com/in/varshithrgk/
+[Canonical site](https://gopalakrishnavarshith.github.io/)
+[LinkedIn profile](https://www.linkedin.com/in/varshithrgk/)
 
 ## Main content
 
-- Homepage and professional profile: https://gopalakrishnavarshith.github.io/
-- Case studies: https://gopalakrishnavarshith.github.io/#work
-- Experience: https://gopalakrishnavarshith.github.io/#experience
-- Sitemap: https://gopalakrishnavarshith.github.io/sitemap.xml
+- [Homepage and professional profile](https://gopalakrishnavarshith.github.io/)
+- [Case studies](https://gopalakrishnavarshith.github.io/#work)
+- [Experience](https://gopalakrishnavarshith.github.io/#experience)
+- [Sitemap](https://gopalakrishnavarshith.github.io/sitemap.xml)
 
 All published case studies use public-safe descriptions. Confidential systems,
 source code, and internal implementation details are not included.
